@@ -1,4 +1,7 @@
-import { useBlockchain, useCoingecko } from "@/stores";
+import { useBlockchain, useCoingecko, useBaseStore, useBankStore, useFormatter } from "@/stores";
+import { useDistributionStore } from "@/stores/useDistributionStore";
+import { useMintStore } from "@/stores/useMintStore";
+import { useStakingStore } from "@/stores/useStakingStore";
 import numeral from "numeral";
 import { defineStore } from "pinia";
 
@@ -24,6 +27,7 @@ export const useIndexModule = defineStore('module-index', {
                 description: {
                     en: ''
                 },
+                categories: [] as string[],
                 market_cap_rank: 0,
                 links: {
                     twitter_screen_name: '',
@@ -58,7 +62,8 @@ export const useIndexModule = defineStore('module-index', {
                 market_caps: [],
                 prices: [] as number[],
                 total_volumes: [] as number[],
-            }
+            },
+            communityPool: [] as {amount: string, denom: string}[]
         }
     },
     getters: {
@@ -67,8 +72,10 @@ export const useIndexModule = defineStore('module-index', {
             return chain.current
         },
         coingecko() {
-            const store = useCoingecko()
-            return store
+            return useCoingecko()
+        },
+        bankStore() {
+            return useBankStore()
         },
         twitter() : string {
             return `https://twitter.com/${this.coinInfo.links.twitter_screen_name}`
@@ -106,14 +113,81 @@ export const useIndexModule = defineStore('module-index', {
             const change = this.coinInfo.tickers[this.tickerIndex]?.trust_score
             return colorMap(change)
         },
+
+        mintStore() {
+            return useMintStore()
+        },
+
+        stats () { 
+            const base = useBaseStore()
+            const bank = useBankStore()
+            const formatter = useFormatter()
+            const staking = useStakingStore()
+            const pool = staking.pool
+            return [
+                {
+                  title: 'Height',
+                  color: 'primary',
+                  icon: 'mdi-pound',
+                  stats: String(base.latest.block?.header?.height || 0),
+                  change: 0,
+                },
+                {
+                  title: 'Validators',
+                  color: 'error',
+                  icon: 'mdi-human-queue',
+                  stats: String(base.latest.block?.last_commit?.signatures.length || 0),
+                  change: 0,
+                },
+                {
+                  title: 'Supply',
+                  color: 'success',
+                  icon: 'mdi-currency-usd',
+                  stats: formatter.formatTokenAmount(bank.supply),
+                  change: 0,
+                },
+                {
+                  title: 'Bonded Tokens',
+                  color: 'warning',
+                  icon: 'mdi-lock',
+                  stats: formatter.formatTokenAmount({amount: pool.bonded_tokens, denom: staking.params.bond_denom }),
+                  change: 0,
+                },                
+                {
+                    title: 'Inflation',
+                    color: 'success',
+                    icon: 'mdi-chart-multiple',
+                    stats: formatter.formatDecimalToPercent(this.mintStore.inflation),
+                    change: 0,
+                },
+                {
+                    title: 'Community Pool',
+                    color: 'primary',
+                    icon: 'mdi-bank',
+                    stats: formatter.formatTokens(this.communityPool),
+                    change: 0,
+                },
+            ]
+        },
     },
     actions: {
+        async loadDashboard() {
+            this.initCoingecko()
+            this.mintStore.fetchInflation()
+            const dist = useDistributionStore()
+            dist.fetchCommunityPool().then(x => {
+                this.communityPool = x.pool.filter(t=> t.denom.length < 10).map(t => ({ 
+                    amount: String(parseInt(t.amount)),
+                    denom: t.denom
+                }))
+            })
+        },
         tickerColor(color: string) {
             return colorMap(color)
         },        
         initCoingecko() {
             this.tickerIndex = 0
-            const [firstAsset] = this.blockchain?.assets
+            const [firstAsset] = this.blockchain?.assets || []
             if (firstAsset && firstAsset.coingecko_id) {
                 this.coingecko.getCoinInfo(firstAsset.coingecko_id).then(x => {
                     this.coinInfo = x
