@@ -230,7 +230,7 @@ const tab = ref('detail')
                     <tr v-for="resp in txs?.tx_responses">
                         <td>{{ resp.height }}</td>
                         <td>
-                            <div class="text-xs truncate text-primary dark:invert">
+                            <div class="text-xs truncate text-primary dark:invert-x">
                                 <RouterLink :to="`/${chainStore.chainName}/tx/${resp.txhash}`">{{ resp.txhash }}
                                 </RouterLink>
                             </div>
@@ -267,7 +267,6 @@ const tab = ref('detail')
                                 {{ $t('cosmwasm.btn_query') }}
                             </button>
                         </div>
-
                     </div>
                 </div>
             </div>
