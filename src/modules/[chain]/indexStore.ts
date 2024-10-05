@@ -200,9 +200,150 @@ export const useIndexModule = defineStore('module-index', {
           ),
           change: 0,
         },
+        // {
+        //   title: 'Mirror Bucket',
+        //   color: 'warning',
+        //   icon: 'mdi-lock',
+        //   stats: formatter.formatTokenAmount({
+        //     // @ts-ignore
+        //     amount: this.pool.bonded_tokens,
+        //     denom: staking.params.bond_denom,
+        //   }),
+        //   change: 0,
+        // },
+        // {
+        //   title: 'OM Upgrade Incentive',
+        //   color: 'warning',
+        //   icon: 'mdi-lock',
+        //   stats: formatter.formatTokenAmount({
+        //     // @ts-ignore
+        //     amount: this.pool.bonded_tokens,
+        //     denom: staking.params.bond_denom,
+        //   }),
+        //   change: 0,
+        // },
+        // {
+        //   title: 'Air Drop',
+        //   color: 'warning',
+        //   icon: 'mdi-lock',
+        //   stats: formatter.formatTokenAmount({
+        //     // @ts-ignore
+        //     amount: this.pool.bonded_tokens,
+        //     denom: staking.params.bond_denom,
+        //   }),
+        //   change: 0,
+        // },
+        // {
+        //   title: 'Pre-Seed Investors',
+        //   color: 'warning',
+        //   icon: 'mdi-lock',
+        //   stats: formatter.formatTokenAmount({
+        //     // @ts-ignore
+        //     amount: this.pool.bonded_tokens,
+        //     denom: staking.params.bond_denom,
+        //   }),
+        //   change: 0,
+        // },
+        // {
+        //   title: 'Seed Investors',
+        //   color: 'warning',
+        //   icon: 'mdi-lock',
+        //   stats: formatter.formatTokenAmount({
+        //     // @ts-ignore
+        //     amount: this.pool.bonded_tokens,
+        //     denom: staking.params.bond_denom,
+        //   }),
+        //   change: 0,
+        // },
+        // {
+        //   title: 'Ecosystem Development',
+        //   color: 'warning',
+        //   icon: 'mdi-lock',
+        //   stats: formatter.formatTokenAmount({
+        //     // @ts-ignore
+        //     amount: this.pool.bonded_tokens,
+        //     denom: staking.params.bond_denom,
+        //   }),
+        //   change: 0,
+        // },
       ];
     },
+    foundationStats() {
+      const base = useBaseStore();
+      const bank = useBankStore();
+      const staking = useStakingStore();
+      const mintStore = useMintStore();
+      const formatter = useFormatter();
 
+      return [
+        {
+          title: 'Mirror Fund',
+          color: 'warning',
+          icon: 'mdi-lock',
+          stats: formatter.formatTokenAmount({
+            // @ts-ignore
+            amount: this.pool.bonded_tokens,
+            denom: staking.params.bond_denom,
+          }),
+          change: 0,
+        },
+        {
+          title: 'OM Upgrade Incentive',
+          color: 'warning',
+          icon: 'mdi-lock',
+          stats: formatter.formatTokenAmount({
+            // @ts-ignore
+            amount: this.pool.bonded_tokens,
+            denom: staking.params.bond_denom,
+          }),
+          change: 0,
+        },
+        {
+          title: 'Air Drop',
+          color: 'warning',
+          icon: 'mdi-lock',
+          stats: formatter.formatTokenAmount({
+            // @ts-ignore
+            amount: this.pool.bonded_tokens,
+            denom: staking.params.bond_denom,
+          }),
+          change: 0,
+        },
+        {
+          title: 'Pre-Seed Investors',
+          color: 'warning',
+          icon: 'mdi-lock',
+          stats: formatter.formatTokenAmount({
+            // @ts-ignore
+            amount: this.pool.bonded_tokens,
+            denom: staking.params.bond_denom,
+          }),
+          change: 0,
+        },
+        {
+          title: 'Seed Investors',
+          color: 'warning',
+          icon: 'mdi-lock',
+          stats: formatter.formatTokenAmount({
+            // @ts-ignore
+            amount: this.pool.bonded_tokens,
+            denom: staking.params.bond_denom,
+          }),
+          change: 0,
+        },
+        {
+          title: 'Ecosystem Development',
+          color: 'warning',
+          icon: 'mdi-lock',
+          stats: formatter.formatTokenAmount({
+            // @ts-ignore
+            amount: this.pool.bonded_tokens,
+            denom: staking.params.bond_denom,
+          }),
+          change: 0,
+        },
+      ];
+    },
     coingeckoId() {
       this.tickerIndex = 0;
       // @ts-ignore

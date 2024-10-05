@@ -51,7 +51,7 @@ function changeChart(type: string) {
     </div>
     <ApexCharts
         type="area"
-        height="230"
+        height="330"
         :options="chartConfig"
         :series="series"
     />
