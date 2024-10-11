@@ -66,8 +66,6 @@ const chainStore = useBlockchain()
 
       <h2 class="mb-6">{{ $t('pages.description') }}</h2>
     </div>
-
-
     <div class="grid grid-cols-1 gap-4 mt-6 md:!grid-cols-3 lg:!grid-cols-4 2xl:!grid-cols-5">
       <ChainSummary v-for="(chain, index) in chains" :key="index" :name="chain.chainName" />
     </div>
