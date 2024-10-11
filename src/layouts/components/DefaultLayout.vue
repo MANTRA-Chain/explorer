@@ -75,6 +75,7 @@ dayjs()
 <template>
 
   <div class="bg-gray-100 dark:bg-[#000000]">
+    
     <!-- sidebar -->
     <div
       class="w-64 fixed z-50 left-0 top-0 bottom-0 overflow-auto bg-base-100 border-r border-gray-100 dark:border-gray-700"
@@ -82,6 +83,7 @@ dayjs()
       <div class="flex justify-between mt-1 pl-4 py-4 mb-1">
         <RouterLink to="/" class="flex justify-center items-center w-full">
           <img class="h-8" src="../../assets/logo.svg" />
+          <b><span style="margin-left: 6px;">Internal</span></b>
         </RouterLink>
         <div class="pr-4 cursor-pointer xl:!hidden" @click="sidebarShow = false">
           <Icon icon="mdi-close" class="text-2xl" />
