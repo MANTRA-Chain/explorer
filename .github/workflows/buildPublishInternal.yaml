@@ -1,9 +1,6 @@
 name: Publish UI to Cloudflare Pages
 
 on:
-  push:
-    branches:
-      - main
   workflow_dispatch:
     inputs:
       bump:
@@ -32,15 +29,17 @@ jobs:
         working-directory: ./
 
       - name: Build project
-        run: yarn build:public
+        run: yarn build:internal
         working-directory: ./
-
+        env:
+          VITE_CF_ACCESS_CLIENT_ID: ${{ secrets.CF_ACCESS_CLIENT_ID }}
+          VITE_CF_ACCESS_CLIENT_SECRET: ${{ secrets.CF_ACCESS_CLIENT_SECRET }}
       - name: Deploy to Cloudflare Pages
         uses: cloudflare/pages-action@v1
         with:
           apiToken: ${{ secrets.CLOUDFLARE_PAGES_API_TOKEN }}
           accountId: ${{ secrets.CLOUDFLARE_PAGES_ACCOUNT_ID }}
-          projectName: explorer
+          projectName: explorer-internal
           directory: ./dist
           gitHubToken: ${{ secrets.GITHUB_TOKEN }}
 
