@@ -1,25 +1,26 @@
 {
-    "chain_name": "MANTRA-Dukong-Sandbox",
-    "coingecko": "om",
+    "chain_name": "MANTRA-Hongbai",
+    "pretty_name": "MANTRA Hongbai",
     "type": "testnet",
+    "coingecko": "om",
     "api": [
         {
             "provider": "MANTRA",
-            "address": "https://api.canary-net.mantrachain.dev"
+            "address": "https://api.hongbai.mantrachain.dev"
         }
     ],
     "rpc": [
         {
             "provider": "MANTRA",
-            "address": "https://rpc.canary-net.mantrachain.dev"
+            "address": "https://rpc.hongbai.mantrachain.dev"
         }
     ],
     "snapshot_provider": "",
     "sdk_version": "0.50.0",
     "coin_type": "118",
-    "min_tx_fee": "100000",
+    "min_tx_fee": "1000",
     "addr_prefix": "mantra",
-    "logo": "https://assets.mantra.finance/images/networks/dukong.svg",
+    "logo": "https://assets.mantra.finance/images/networks/hongbai.svg",
     "theme_color": "#FF97D6",
     "assets": [
         {

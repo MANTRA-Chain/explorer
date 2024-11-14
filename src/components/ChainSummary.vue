@@ -35,6 +35,9 @@ const addFavor = (e: Event) => {
     <div class="font-semibold ml-4 text-base flex-1 truncate capitalize">
       {{ conf?.prettyName || props.name }}
     </div>
+    <div class="font-extralight ml-1 text-sm capitalize hide">
+      <!-- TODO: Add Chain Type -->
+    </div>
     <div
       @click="addFavor"
       class="pl-4 text-xl"
