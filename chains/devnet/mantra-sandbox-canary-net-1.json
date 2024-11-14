@@ -1,17 +1,17 @@
 {
-    "chain_name": "MANTRA-Dukong-Internal",
+    "chain_name": "MANTRA-Canary-Net-1",
     "coingecko": "om",
     "type": "testnet",
     "api": [
         {
             "provider": "MANTRA",
-            "address": "https://api.dukong.mantrachain.dev"
+            "address": "https://api.canary.mantrachain.dev"
         }
     ],
     "rpc": [
         {
             "provider": "MANTRA",
-            "address": "https://rpc.dukong.mantrachain.dev"
+            "address": "https://rpc.canary.mantrachain.dev"
         }
     ],
     "snapshot_provider": "",
