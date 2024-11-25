@@ -121,7 +121,9 @@ async function loadAccount(address: string) {
       } else {
         const formatted = format.formatToken(balanceItem)
         tempFormattedBalances.push({
-          amount: formatted.split(' ')[0],
+          amount: formatted.split(' ')[0] === 'NaN'
+            ? balanceItem.amount
+            : formatted.split(' ')[0],
           denom: formatted.split(' ')[1],
         });
       }
