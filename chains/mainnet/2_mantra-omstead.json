@@ -1,17 +1,17 @@
 {
-    "chain_name": "MANTRA-Dukong-Sandbox",
+    "chain_name": "MANTRA-OMStead-EVM",
     "coingecko": "om",
     "type": "testnet",
     "api": [
         {
             "provider": "MANTRA",
-            "address": "https://api.canary-net.mantrachain.dev"
+            "address": "https://api.omstead.io"
         }
     ],
     "rpc": [
         {
             "provider": "MANTRA",
-            "address": "https://rpc.canary-net.mantrachain.dev"
+            "address": "https://rpc.omstead.io"
         }
     ],
     "snapshot_provider": "",
