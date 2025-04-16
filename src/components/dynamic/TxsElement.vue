@@ -45,7 +45,7 @@ const chain = useBlockchain();
           <td>{{ item.injected }}</td>
           <td>
             <span v-if="item.injected">{{ item.hash }}</span>
-            <RouterLink v-else :to="`/${chain.chainName}/tx/${item.hash}`" class="text-primary dark:invert">{{
+            <RouterLink v-else :to="`/${chain.chainName}/tx/${item.hash}`" class="text-primary dark:invert-x">{{
               item.hash
               }}</RouterLink>
           </td>
