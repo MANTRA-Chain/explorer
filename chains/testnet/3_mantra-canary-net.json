@@ -5,13 +5,13 @@
     "api": [
         {
             "provider": "MANTRA",
-            "address": "https://api.canary-net.mantrachain.dev"
+            "address": "https://api.canary.mantrachain.dev"
         }
     ],
     "rpc": [
         {
             "provider": "MANTRA",
-            "address": "https://rpc.canary-net.mantrachain.dev"
+            "address": "https://rpc.canary.mantrachain.dev"
         }
     ],
     "snapshot_provider": "",
