@@ -88,7 +88,7 @@ async function initParamsForKeplr() {
             coinDecimals,
             coinGeckoId: chain.assets[0].coingecko_id || 'unknown',
         },
-        features: chain.keplrFeatures || [],
+        features: chain.features || [],
     }, null, '\t')
 }
 
@@ -123,6 +123,7 @@ async function initSnap() {
                 },
             },
         ],
+        features: chain.features || [],
     }, null, '\t')
 }
 
