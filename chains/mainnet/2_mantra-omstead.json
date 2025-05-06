@@ -30,20 +30,8 @@
             "logo": "../assets/images/coins/om.jpg"
         }
     ],
-    "features": [
-      "dashboard",
-      "governance",
-      "staking",
-      "blocks", 
-      "transactions",
-      "uptime",
-      "ibc",
-      "supply",
-      "parameters",
-      "consensus",
-      "cosmwasm", 
-      "state-sync",
-      "widget",
+    "keplr_features": [
+      "cosmwasm",
       "eth-address-gen", 
       "eth-key-sign",
       "eth-secp256k1-cosmos"
