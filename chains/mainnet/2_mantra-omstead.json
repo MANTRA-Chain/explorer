@@ -30,5 +30,21 @@
             "logo": "../assets/images/coins/om.jpg"
         }
     ],
-    "features": ["cosmwasm", "eth-address-gen", "eth-key-sign"]
+    "features": [
+      "dashboard",
+      "governance",
+      "staking",
+      "blocks", 
+      "transactions",
+      "uptime",
+      "ibc",
+      "supply",
+      "parameters",
+      "consensus",
+      "cosmwasm", 
+      "state-sync",
+      "widget",
+      "eth-address-gen", 
+      "eth-key-sign"
+    ]
 }
