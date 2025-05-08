@@ -282,6 +282,7 @@ const tab = ref('detail')
                         <div>
                             <span v-for="q in queries" class="btn btn-xs mx-1" @click="selectQuery(q)">{{ q }}</span>
                         </div>
+
                         <textarea v-model="query" placeholder="Query String, {}" label="Query String"
                             class="my-2 textarea textarea-bordered w-full" />
 
