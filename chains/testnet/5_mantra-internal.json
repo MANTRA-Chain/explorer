@@ -1,0 +1,33 @@
+{
+    "chain_name": "MANTRA-1-Internal",
+    "coingecko": "om",
+    "type": "mainnet",
+    "api": [
+        {
+            "provider": "MANTRA",
+            "address": "https://api.archive.mantrachain.io"
+        }
+    ],
+    "rpc": [
+        {
+            "provider": "MANTRA",
+            "address": "https://rpc.archive.mantrachain.io"
+        }
+    ],
+    "snapshot_provider": "",
+    "sdk_version": "0.50.0",
+    "coin_type": "118",
+    "min_tx_fee": "100000",
+    "addr_prefix": "mantra",
+    "logo": "https://assets.mantra.finance/images/networks/dukong.svg",
+    "theme_color": "#FF97D6",
+    "assets": [
+        {
+            "base": "uom",
+            "symbol": "OM",
+            "exponent": "6",
+            "coingecko_id": "mantra-dao",
+            "logo": "../assets/images/coins/om.jpg"
+        }
+    ]
+}
