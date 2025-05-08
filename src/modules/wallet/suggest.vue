@@ -141,6 +141,19 @@ function suggest() {
       window.leap.experimentalSuggestChain(JSON.parse(conf.value)).catch(e => {
         error.value = e
       })
+
+      // Reference: https://docs.keplr.app/api/multi-ecosystem-support/evm#example-usage
+      if (evmConf.value !== null) {
+        // @ts-ignore
+        window.leap.ethereum.request({
+          method: "wallet_addEthereumChain",
+          params: [JSON.parse(evmConf.value)]
+        })// @ts-ignore
+          .catch(e => {
+          error.value = e
+          console.log(e);
+        })
+      }
     }
   } else if (wallet.value === "keplr") {
     // One click suggest 2 chains
@@ -157,7 +170,8 @@ function suggest() {
         window.keplr.ethereum.request({
           method: "wallet_addEthereumChain",
           params: [JSON.parse(evmConf.value)]
-        }).catch(e => {
+        })// @ts-ignore
+          .catch(e => {
           error.value = e
           console.log(e);
         })
