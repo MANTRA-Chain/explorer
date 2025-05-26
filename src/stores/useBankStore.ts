@@ -45,7 +45,11 @@ export const useBankStore = defineStore('bankstore', {
 
             // Deduct burn address balance from total supply
             if (burnBalanceRes && burnBalanceRes.balance) {
-              const adjustedAmount = BigInt(originalSupply.amount) - BigInt(burnBalanceRes.balance.amount);
+              const burnAmount = BigInt(burnBalanceRes.balance.amount);
+              const totalAmount = BigInt(originalSupply.amount);
+
+              // Ensure burn amount doesn't exceed total supply
+              const adjustedAmount = burnAmount > totalAmount ? 0n : totalAmount - burnAmount;
               this.supply = {
                 denom: originalSupply.denom,
                 amount: adjustedAmount.toString()
@@ -55,6 +59,14 @@ export const useBankStore = defineStore('bankstore', {
               this.supply = originalSupply;
             }
           }
+        }).catch(error => {
+          console.error('Failed to fetch supply or burn address balance:', error);
+          // Fallback to fetching just the supply
+          this.blockchain.rpc.getBankSupplyByDenom(denom).then(supplyRes => {
+            if (supplyRes.amount) {
+              this.supply = supplyRes.amount;
+            }
+          });
         });
       }
     },
