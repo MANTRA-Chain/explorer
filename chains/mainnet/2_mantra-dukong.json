@@ -16,7 +16,7 @@
     ],
     "snapshot_provider": "",
     "sdk_version": "0.53.3",
-    "coin_type": "60",
+    "coin_type": "118",
     "min_tx_fee": "100000",
     "addr_prefix": "mantra",
     "logo": "https://assets.mantra.finance/images/networks/dukong.svg",
@@ -31,24 +31,6 @@
         }
     ],
     "keplr_features": [
-        "cosmwasm",
-        "eth-address-gen",
-        "eth-key-sign",
-        "eth-secp256k1-cosmos"
-    ],
-    "evm": {
-        "chainId": "0x16FF",
-        "chainName": "MANTRA Dukong EVM",
-        "nativeCurrency": {
-            "name": "MANTRA",
-            "symbol": "OM",
-            "decimals": 18
-        },
-        "rpcUrls": [
-            "https://evm.dukong.mantrachain.io"
-        ],
-        "iconUrls": [
-            "https://assets.mantra.finance/images/networks/dukong.svg"
-        ]
-    }
+        "cosmwasm"
+    ]
 }
