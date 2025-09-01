@@ -1,21 +1,22 @@
 {
-    "chain_name": "MANTRA OMStead",
+    "chain_id": "mantra-dukong-evm-1",
+    "chain_name": "MANTRA-Dukong-EVM",
     "coingecko": "om",
     "type": "testnet",
     "api": [
         {
             "provider": "MANTRA",
-            "address": "https://api.omstead.io"
+            "address": "https://api.dukong.mantrachain.io"
         }
     ],
     "rpc": [
         {
             "provider": "MANTRA",
-            "address": "https://rpc.omstead.io"
+            "address": "https://rpc.dukong.mantrachain.io"
         }
     ],
     "snapshot_provider": "",
-    "sdk_version": "0.50.0",
+    "sdk_version": "0.53.3",
     "coin_type": "60",
     "min_tx_fee": "100000",
     "addr_prefix": "mantra",
@@ -31,21 +32,21 @@
         }
     ],
     "keplr_features": [
-      "cosmwasm",
-      "eth-address-gen", 
-      "eth-key-sign",
-      "eth-secp256k1-cosmos"
+        "cosmwasm",
+        "eth-address-gen",
+        "eth-key-sign",
+        "eth-secp256k1-cosmos"
     ],
     "evm": {
-        "chainId": "0x1ED0",
-        "chainName": "MANTRA OMStead EVM",
+        "chainId": "0x16FF",
+        "chainName": "MANTRA Dukong EVM",
         "nativeCurrency": {
             "name": "MANTRA",
             "symbol": "OM",
             "decimals": 18
         },
         "rpcUrls": [
-            "https://evm.omstead.io"
+            "https://evm.dukong.mantrachain.io"
         ],
         "iconUrls": [
             "https://assets.mantra.finance/images/networks/dukong.svg"
