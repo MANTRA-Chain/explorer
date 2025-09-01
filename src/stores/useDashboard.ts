@@ -58,7 +58,7 @@ export interface ChainConfig {
   prettyName: string;
   bech32Prefix: string;
   bech32ConsensusPrefix: string;
-  chainId: string;
+  chainId?: string;
   coinType: string;
   assets: Asset[];
   themeColor?: string;
@@ -125,6 +125,7 @@ export interface LocalConfig {
     symbol: string;
   }[];
   chain_name: string;
+  chain_id?: string;
   coin_type: string;
   logo: string;
   theme_color?: string;
@@ -217,6 +218,10 @@ export function fromLocal(lc: LocalConfig): ChainConfig {
   conf.keplrPriceStep = lc.keplr_price_step;
   conf.themeColor = lc.theme_color;
   conf.faucet = lc.faucet;
+  console.log(lc.chain_id);
+  if (lc.chain_id) {
+    conf.chainId = lc.chain_id;
+  }
   if (lc.evm) {
     conf.evm = lc.evm;
   }
