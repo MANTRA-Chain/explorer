@@ -39,8 +39,13 @@ async function initParamsForKeplr() {
     const chain = selected.value
     if (!chain.endpoints?.rest?.at(0)) throw new Error("Endpoint does not set");
     const client = CosmosRestClient.newDefault(chain.endpoints.rest?.at(0)?.address || "")
-    const b = await client.getBaseBlockLatest()
-    const chainid = b.block.header.chain_id
+    let chainId;
+    if (!chain.chainId) {
+      const b = await client.getBaseBlockLatest()
+      chainId = b.block.header.chain_id
+    } else {
+      chainId = chain.chainId
+    }
 
     const gasPriceStep = chain.keplrPriceStep || {
         low: 0.01,
@@ -49,7 +54,7 @@ async function initParamsForKeplr() {
     }
     const coinDecimals = chain.assets[0].denom_units.find(x => x.denom === chain.assets[0].symbol.toLowerCase())?.exponent || 6
     conf.value = JSON.stringify({
-        chainId: chainid,
+        chainId,
         chainName: chain.chainName,
         rpc: chain.endpoints?.rpc?.at(0)?.address,
         rest: chain.endpoints?.rest?.at(0)?.address,
@@ -95,6 +100,8 @@ async function initParamsForKeplr() {
   // Reference: https://docs.keplr.app/api/multi-ecosystem-support/evm
   if (chain.evm) {
     evmConf.value = JSON.stringify(chain.evm, null, '\t')
+  } else {
+    evmConf.value = null
   }
 }
 
@@ -104,8 +111,13 @@ async function initSnap() {
 
     if (!chain.endpoints?.rest?.at(0)) throw new Error("Endpoint does not set");
     const client = CosmosRestClient.newDefault(chain.endpoints.rest?.at(0)?.address || "")
-    const b = await client.getBaseBlockLatest()
-    const chainId = b.block.header.chain_id
+    let chainId;
+    if (!chain.chainId) {
+      const b = await client.getBaseBlockLatest()
+      chainId = b.block.header.chain_id
+    } else {
+      chainId = chain.chainId
+    }
 
     conf.value = JSON.stringify({
         chainId,
