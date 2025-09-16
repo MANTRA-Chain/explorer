@@ -1,5 +1,5 @@
 {
-    "chain_name": "MANTRA-1",
+    "chain_name": "MANTRA",
     "coingecko": "om",
     "type": "mainnet",
     "api": [
@@ -29,5 +29,9 @@
             "coingecko_id": "mantra-dao",
             "logo": "../assets/images/coins/om.jpg"
         }
+    ],
+    "keplr_features": [
+      "cosmwasm",
+      "evm-feemarket"
     ]
 }
