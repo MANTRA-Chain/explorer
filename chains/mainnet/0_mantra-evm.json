@@ -1,6 +1,6 @@
 {
     "chain_id": "mantra-evm-1",
-    "chain_name": "MANTRA EVM",
+    "chain_name": "MANTRA (EVM Interoperable)",
     "coingecko": "om",
     "type": "mainnet",
     "api": [
@@ -35,7 +35,8 @@
     "cosmwasm",
     "eth-address-gen",
     "eth-key-sign",
-    "eth-secp256k1-cosmos"
+    "eth-secp256k1-cosmos",
+    "evm-feemarket"
   ],
   "evm": {
     "chainId": "0x1700",
