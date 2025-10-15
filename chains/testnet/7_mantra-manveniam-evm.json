@@ -1,0 +1,55 @@
+{
+    "chain_id": "manveniam-1",
+    "chain_name": "Manveniam-EVM",
+    "coingecko": "",
+    "type": "testnet",
+    "api": [
+        {
+            "provider": "MANTRA",
+            "address": "https://api.manveniam.mantrachain.io"
+        }
+    ],
+    "rpc": [
+        {
+            "provider": "MANTRA",
+            "address": "https://rpc.manveniam.mantrachain.io"
+        }
+    ],
+    "snapshot_provider": "",
+    "sdk_version": "0.53.3",
+    "coin_type": "60",
+    "min_tx_fee": "100000",
+    "addr_prefix": "mantra",
+    "logo": "https://assets.mantra.finance/images/networks/dukong.svg",
+    "theme_color": "#FF97D6",
+    "assets": [
+        {
+            "base": "anvnm",
+            "symbol": "NVNM",
+            "exponent": "6",
+            "coingecko_id": "",
+            "logo": "../assets/images/coins/om.jpg"
+        }
+    ],
+    "keplr_features": [
+        "cosmwasm",
+        "eth-address-gen",
+        "eth-key-sign",
+        "eth-secp256k1-cosmos"
+    ],
+    "evm": {
+        "chainId": "0xe607",
+        "chainName": "MANTRA Manveniam EVM",
+        "nativeCurrency": {
+            "name": "Inveniam",
+            "symbol": "NVNM",
+            "decimals": 18
+        },
+        "rpcUrls": [
+            "https://evm.archive.skynet.mantrachain.io"
+        ],
+        "iconUrls": [
+            "https://assets.mantra.finance/images/networks/dukong.svg"
+        ]
+    }
+}
