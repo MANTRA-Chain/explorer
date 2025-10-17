@@ -46,7 +46,7 @@
             "decimals": 18
         },
         "rpcUrls": [
-            "https://evm.archive.skynet.mantrachain.io"
+            "https://evm.skynet.mantrachain.io"
         ],
         "iconUrls": [
             "https://assets.mantra.finance/images/networks/dukong.svg"

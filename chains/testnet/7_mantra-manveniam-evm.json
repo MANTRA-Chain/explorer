@@ -6,13 +6,13 @@
     "api": [
         {
             "provider": "MANTRA",
-            "address": "https://api.manveniam.mantrachain.io"
+            "address": "https://api.inveniam.mantrachain.io"
         }
     ],
     "rpc": [
         {
             "provider": "MANTRA",
-            "address": "https://rpc.manveniam.mantrachain.io"
+            "address": "https://rpc.inveniam.mantrachain.io"
         }
     ],
     "snapshot_provider": "",
@@ -46,7 +46,7 @@
             "decimals": 18
         },
         "rpcUrls": [
-            "https://evm.archive.skynet.mantrachain.io"
+            "https://evm.inveniam.mantrachain.io"
         ],
         "iconUrls": [
             "https://assets.mantra.finance/images/networks/dukong.svg"
