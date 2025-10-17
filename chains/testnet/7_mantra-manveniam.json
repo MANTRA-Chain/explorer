@@ -5,13 +5,13 @@
     "api": [
         {
             "provider": "MANTRA",
-            "address": "https://api.manveniam.mantrachain.io"
+            "address": "https://api.inveniam.mantrachain.io"
         }
     ],
     "rpc": [
         {
             "provider": "MANTRA",
-            "address": "https://rpc.manveniam.mantrachain.io"
+            "address": "https://rpc.inveniam.mantrachain.io"
         }
     ],
     "snapshot_provider": "",
