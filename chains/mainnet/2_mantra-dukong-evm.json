@@ -24,8 +24,8 @@
     "theme_color": "#FF97D6",
     "assets": [
         {
-            "base": "uom",
-            "symbol": "OM",
+            "base": "amantra",
+            "symbol": "MANTRA",
             "exponent": "6",
             "coingecko_id": "mantra-dao",
             "logo": "../assets/images/coins/om.jpg"
@@ -43,7 +43,7 @@
         "chainName": "MANTRA Dukong EVM",
         "nativeCurrency": {
             "name": "MANTRA",
-            "symbol": "OM",
+            "symbol": "MANTRA",
             "decimals": 18
         },
         "rpcUrls": [
