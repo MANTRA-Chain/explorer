@@ -26,7 +26,7 @@
         {
             "base": "amantra",
             "symbol": "MANTRA",
-            "exponent": "6",
+            "exponent": "18",
             "coingecko_id": "mantra-dao",
             "logo": "../assets/images/coins/om.jpg"
         }
