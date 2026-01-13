@@ -24,9 +24,9 @@
     "theme_color": "#FF97D6",
     "assets": [
         {
-            "base": "uom",
-            "symbol": "OM",
-            "exponent": "6",
+            "base": "amantra",
+            "symbol": "MANTRA",
+            "exponent": "18",
             "coingecko_id": "mantra-dao",
             "logo": "../assets/images/coins/om.jpg"
         }
@@ -35,14 +35,15 @@
         "cosmwasm",
         "eth-address-gen",
         "eth-key-sign",
-        "eth-secp256k1-cosmos"
+        "eth-secp256k1-cosmos",
+        "evm-feemarket"
     ],
     "evm": {
         "chainId": "0x40000",
         "chainName": "MANTRA Skynet EVM",
         "nativeCurrency": {
             "name": "MANTRA",
-            "symbol": "OM",
+            "symbol": "MANTRA",
             "decimals": 18
         },
         "rpcUrls": [
