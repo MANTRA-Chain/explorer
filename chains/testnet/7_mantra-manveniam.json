@@ -23,14 +23,15 @@
     "theme_color": "#FF97D6",
     "assets": [
         {
-            "base": "anvnm",
-            "symbol": "NVNM",
-            "exponent": "6",
+            "base": "amantra",
+            "symbol": "MANTRA",
+            "exponent": "18",
             "coingecko_id": "mantra-dao",
             "logo": "../assets/images/coins/om.jpg"
         }
     ],
     "keplr_features": [
-        "cosmwasm"
+        "cosmwasm",
+        "evm-feemarket"
     ]
 }

@@ -24,10 +24,10 @@
     "theme_color": "#FF97D6",
     "assets": [
         {
-            "base": "anvnm",
-            "symbol": "NVNM",
-            "exponent": "6",
-            "coingecko_id": "",
+            "base": "amantra",
+            "symbol": "MANTRA",
+            "exponent": "18",
+            "coingecko_id": "mantra-dao",
             "logo": "../assets/images/coins/om.jpg"
         }
     ],
@@ -35,7 +35,8 @@
         "cosmwasm",
         "eth-address-gen",
         "eth-key-sign",
-        "eth-secp256k1-cosmos"
+        "eth-secp256k1-cosmos",
+        "evm-feemarket"
     ],
     "evm": {
         "chainId": "0xe607",
