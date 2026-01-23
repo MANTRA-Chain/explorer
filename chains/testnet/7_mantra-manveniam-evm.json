@@ -6,7 +6,7 @@
     "api": [
         {
             "provider": "MANTRA",
-            "address": "https://api.inveniam.mantrachain.io"
+            "address": "https://api.archive.inveniam.mantrachain.io"
         }
     ],
     "rpc": [
