@@ -5,7 +5,7 @@
     "api": [
         {
             "provider": "MANTRA",
-            "address": "https://api.skynet.mantrachain.io"
+            "address": "https://api.archive.skynet.mantrachain.io"
         }
     ],
     "rpc": [
