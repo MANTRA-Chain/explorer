@@ -16,17 +16,17 @@
         }
     ],
     "snapshot_provider": "",
-    "sdk_version": "v0.53.3",
+    "sdk_version": "0.53.4",
     "coin_type": "60",
     "min_tx_fee": "100000",
     "addr_prefix": "mantra",
-    "logo": "https://assets.mantra.finance/images/networks/dukong.svg",
+    "logo": "https://assets.mantra.finance/images/networks/mantra-1.svg",
     "theme_color": "#FF97D6",
     "assets": [
         {
-            "base": "uom",
-            "symbol": "OM",
-            "exponent": "6",
+            "base": "amantra",
+            "symbol": "MANTRA",
+            "exponent": "18",
             "coingecko_id": "mantra-dao",
             "logo": "../assets/images/coins/om.jpg"
         }
@@ -43,14 +43,14 @@
     "chainName": "MANTRA EVM",
     "nativeCurrency": {
       "name": "MANTRA",
-      "symbol": "OM",
+      "symbol": "MANTRA",
       "decimals": 18
     },
     "rpcUrls": [
       "https://evm.mantrachain.io"
     ],
     "iconUrls": [
-      "https://assets.mantra.finance/images/networks/dukong.svg"
+      "https://assets.mantra.finance/images/networks/mantra-1.svg"
     ]
   }
 }
