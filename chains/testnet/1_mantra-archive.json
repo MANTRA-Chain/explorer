@@ -1,6 +1,6 @@
 {
     "chain_name": "MANTRA-1 (Archive)",
-    "coingecko": "om",
+    "coingecko": "mantra",
     "type": "mainnet",
     "api": [
         {
@@ -23,10 +23,10 @@
     "theme_color": "#FF97D6",
     "assets": [
         {
-            "base": "uom",
-            "symbol": "OM",
+            "base": "amantra",
+            "symbol": "MANTRA",
             "exponent": "6",
-            "coingecko_id": "mantra-dao",
+            "coingecko_id": "mantra",
             "logo": "../assets/images/coins/om.jpg"
         }
     ]

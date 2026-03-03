@@ -1,7 +1,7 @@
 {
     "chain_id": "mantra-evm-1",
     "chain_name": "MANTRA (EVM Interoperable)",
-    "coingecko": "om",
+    "coingecko": "mantra",
     "type": "mainnet",
     "api": [
         {
@@ -27,7 +27,7 @@
             "base": "amantra",
             "symbol": "MANTRA",
             "exponent": "18",
-            "coingecko_id": "mantra-dao",
+            "coingecko_id": "mantra",
             "logo": "../assets/images/coins/om.jpg"
         }
     ],
