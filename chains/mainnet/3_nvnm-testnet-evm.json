@@ -28,7 +28,7 @@
             "symbol": "MANTRA USD",
             "exponent": "18",
             "coingecko_id": "mantra-usd",
-            "logo": "../assets/images/coins/mantraUSD_token.pngv"
+            "logo": "../assets/images/coins/mantraUSD_token.png"
         }
     ],
     "keplr_features": [
