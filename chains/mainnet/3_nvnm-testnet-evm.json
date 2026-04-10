@@ -1,0 +1,55 @@
+{
+    "chain_id": "nvnm-testnet-1",
+    "chain_name": "NVNM Testnet",
+    "coingecko": "mantra-usd",
+    "type": "testnet",
+    "api": [
+        {
+            "provider": "MANTRA",
+            "address": "https://api.testnet.nvnmchain.io"
+        }
+    ],
+    "rpc": [
+        {
+            "provider": "MANTRA",
+            "address": "https://rpc.testnet.nvnmchain.io"
+        }
+    ],
+    "snapshot_provider": "",
+    "sdk_version": "0.53.4",
+    "coin_type": "60",
+    "min_tx_fee": "100000",
+    "addr_prefix": "nvnm",
+    "logo": "https://framerusercontent.com/images/mPQRVGGcvIw3BhrpQDN3WxMGw74.svg",
+    "theme_color": "#FF97D6",
+    "assets": [
+        {
+            "base": "amantrausd",
+            "symbol": "MANTRAUSD",
+            "exponent": "18",
+            "coingecko_id": "mantra-usd",
+            "logo": "../assets/images/coins/mantraUSD_token.png"
+        }
+    ],
+    "keplr_features": [
+        "eth-address-gen",
+        "eth-key-sign",
+        "eth-secp256k1-cosmos",
+        "evm-feemarket"
+    ],
+    "evm": {
+        "chainId": "0xC02A7",
+        "chainName": "NVNM Testnet EVM",
+        "nativeCurrency": {
+            "name": "MANTRA USD",
+            "symbol": "MANTRAUSD",
+            "decimals": 18
+        },
+        "rpcUrls": [
+            "https://evm.testnet.nvnmchain.io"
+        ],
+        "iconUrls": [
+            "https://framerusercontent.com/images/mPQRVGGcvIw3BhrpQDN3WxMGw74.svg"
+        ]
+    }
+}
