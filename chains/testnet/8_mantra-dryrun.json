@@ -1,7 +1,7 @@
 {
     "chain_id": "mantra-dryrun-1",
     "chain_name": "MANTRA-Dryrun",
-    "coingecko": "om",
+    "coingecko": "mantra",
     "type": "testnet",
     "api": [
         {
@@ -27,7 +27,7 @@
             "base": "uom",
             "symbol": "OM",
             "exponent": "6",
-            "coingecko_id": "mantra-dao",
+            "coingecko_id": "mantra",
             "logo": "../assets/images/coins/om.jpg"
         }
     ],

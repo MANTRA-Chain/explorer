@@ -1,6 +1,6 @@
 {
   "chain_name": "MANTRA-Canary (Archive)",
-  "coingecko": "om",
+  "coingecko": "mantra",
   "type": "testnet",
   "api": [
     {
@@ -26,7 +26,7 @@
       "base": "amantra",
       "symbol": "MANTRA",
       "exponent": "18",
-      "coingecko_id": "mantra-dao",
+      "coingecko_id": "mantra",
       "logo": "../assets/images/coins/om.jpg"
     }
   ]
